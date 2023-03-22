@@ -8,6 +8,12 @@ app.use(cors());
 const AuthController = require('./controller/authController');
 app.use('/api/auth', AuthController);
 
+
+app.get('/',(req,res) => {
+    res.send("Welcome to Express")
+})
+
+
 app.listen(port,() => {
     console.log(`Running on port ${port}`)
 })
